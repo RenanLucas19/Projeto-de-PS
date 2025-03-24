@@ -9,102 +9,104 @@ body {
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
+    /* Remova height: 100vh; para permitir que o body cresça conforme o conteúdo */
 }
 
+/* Cabeçalho Fixo no Topo */
 .cabecalho {
     width: 100%;
-    background-color: #3B82F6;
+    background-color: #3B82F6; /* Fundo azul */
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed; 
-    z-index: 1000; 
+    position: fixed; /* Fixa o cabeçalho no topo */
+    z-index: 1000; /* Garante que fique acima do conteúdo */
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 10px; 
+    gap: 10px; /* Espaçamento entre a logo e a frase */
 }
 
 .logo-container .logo {
-    width: 60px; 
+    width: 60px; /* Tamanho da logo */
     height: auto;
 }
 
 .logo-container .frase {
     font-size: 16px;
-    color: #ffffff;
-    font-weight: bold; 
+    color: #ffffff; /* Texto branco */
+    font-weight: bold; /* Deixa a frase em negrito */
 }
 
 
 .imagem-container {
     width: 103%;
-    margin-top: 80px; 
+    margin-top: 80px; /* Ajusta o espaço para o cabeçalho */
     text-align: center;
-    overflow: hidden; 
-    position: relative; 
+    overflow: hidden; /* Garante que a imagem não ultrapasse o container */
+    position: relative; /* Permite posicionar o texto sobre a imagem */
 }
 
 .imagem-container .caneta {
-    width: 100%; 
-    height: 250px; 
-    object-fit: cover; 
+    width: 100%; /* Ocupa a largura total da tela */
+    height: 250px; /* Altura fixa da imagem */
+    object-fit: cover; /* Garante que a imagem cubra o espaço */
 }
 
 /* Texto sobre a imagem */
 .texto-sobre-imagem {
     position: absolute;
-    top: 86%; 
-    left: 27%; 
-    transform: translate(-50%, -50%); 
-    color: white; 
-    font-size: 100px; 
-    font-weight: bold; 
+    top: 86%; /* Centraliza verticalmente */
+    left: 30%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta o centro exato */
+    color: white; /* Cor do texto */
+    font-size: 100px; /* Tamanho do texto */
+    font-weight: bold; /* Texto em negrito */
 }
 
 /* Container para Disciplinas Matriculadas */
 .disciplinas-container {
-    width: 1800px; 
-    margin: 50px; 
-    padding: 15px; 
-    background-color: #f9f9f9; 
-    border: 1px solid #ddd; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 1400px; /* Largura do container */
+    margin: 50px; /* Espaçamento externo */
+    padding: 15px; /* Espaçamento interno */
+    background-color: #f9f9f9; /* Fundo claro */
+    border: 1px solid #ddd; /* Borda sutil */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
 .cabecalho-disciplinas {
     display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    margin-bottom: 25px; 
+    justify-content: space-between; /* Alinha o título à esquerda e os botões à direita */
+    align-items: center; /* Centraliza verticalmente */
+    margin-bottom: 25px; /* Espaçamento abaixo do cabeçalho */
 }
 
 .cabecalho-disciplinas h2 {
     font-size: 25px;
-    color: #333; 
-    font-weight: bold; 
+    color: #333; /* Cor do texto */
+    font-weight: bold; /* Título em negrito */
 }
 
 /* Contêiner para os botões à direita */
 .botoes-direita {
     display: flex;
-    gap: 15px; 
+    gap: 15px; /* Espaçamento entre os botões */
 }
 
 /* Estilo dos botões de cadastro */
 .btn-cadastrar {
     padding: 10px 20px;
-    background-color: #fff; 
-    color: #3B82F6; 
+    background-color: #fff; /* Fundo azul */
+    color: #3B82F6; /* Texto branco */
     border: none;
     border-radius: 5px;
     font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s; /* Efeito de transição suave */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -114,19 +116,28 @@ body {
 }
 
 .btn-cadastrar i {
-    margin-right: 8px; 
+    margin-right: 8px; /* Espaçamento entre o ícone e o texto */
 }
 
-
+/* Estilo do modal */
 .modal {
-    display: none; 
+    display: none; /* Oculta o modal inicialmente */
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
     justify-content: center;
     align-items: center;
-    z-index: 1000; 
+    z-index: 1000; /* Garante que o modal fique acima de tudo */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 500px; /* Largura do modal */
+    position: relative;
 }
 
 .close-modal {
@@ -142,6 +153,49 @@ body {
     color: #000;
 }
 
+/* Estilo dos campos e botões dentro do modal */
+.modal-content h3 {
+    font-size: 20px;
+    color: #3b3737;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid #d8dce2;
+    padding-bottom: 10px;
+}
+
+.campo-form {
+    margin-bottom: 30px;
+}
+
+.campo-form label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.campo-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s;
+}
+
+.campo-form input:focus {
+    border-color: #3B82F6;
+    outline: none;
+}
+
+.botoes-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
 .btn-salvar {
     background-color: #fff;
     color: #3B82F6;
@@ -150,7 +204,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
     transition: background-color 0.3s;
 }
 
@@ -167,7 +221,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
     transition: background-color 0.3s;
 }
 
@@ -181,16 +235,18 @@ body {
     margin-top: 15px;
     margin-bottom: 15px;
     display: flex;
-    flex-wrap: wrap; 
-    gap: 30px; 
+    flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha */
+    gap: 30px; /* Espaçamento entre os botões */
 }
 
+/* Estilo dos botões de disciplinas cadastradas */
+/* Estilo dos botões de disciplinas cadastradas */
 .disciplina-botao {
     display: flex;
     align-items: center;
-    gap: 8px; 
+    gap: 8px; /* Espaçamento entre o texto e o ícone de "X" */
     padding: 8px 12px;
-    background-color: #3B82F6; 
+    background-color: #3B82F6; /* Cor azul */
     color: white;
     border: none;
     border-radius: 5px;
@@ -200,7 +256,7 @@ body {
 }
 
 .disciplina-botao:hover {
-    background-color: #1e66d8; 
+    background-color: #1e66d8; /* Cor azul mais escura ao passar o mouse */
 }
 
 /* Estilo do ícone de "X" para remover a disciplina */
@@ -208,35 +264,35 @@ body {
     cursor: pointer;
     font-size:15px;
     color: white;
-    margin-left: 8px; 
+    margin-left: 8px; /* Espaçamento entre o texto e o ícone */
 }
 
 /* Estilo da lista de disciplinas cadastradas */
 .lista-disciplinas {
     margin-top: 20px;
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha */
     gap: 10px;
-    padding-left: 80px;
-    margin-bottom: 20px; 
-  
+    padding-left: 80px; /* Desloca o conteúdo para a direita */
+    margin-bottom: 20px; /* Adiciona um leve espaçamento na parte de baixo */
+    /* Ou use padding-bottom: 20px; se preferir */
 }
 
 /* Estilo dos botões de disciplinas cadastradas */
 .disciplina-item {
     padding: 8px 12px;
-    background-color: #3B82F6; 
+    background-color: #3B82F6; /* Cor azul */
     color: white;
     border: none;
     border-radius: 50px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
 .disciplina-item:hover {
-    background-color: #ffffff; 
+    background-color: #ffffff; /* Cor azul mais escura ao passar o mouse */
     color: #3B82F6;
 }
 
@@ -246,7 +302,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(120, 51, 51, 0.2);
-    width: 400px; 
+    width: 400px;
     position: relative;
 }
 
@@ -259,6 +315,19 @@ body {
     padding-bottom: 10px;
 }
 
+.campo-form {
+    margin-bottom: 15px;
+}
+
+.campo-form label {
+    display: flex;
+    align-items: center;
+    gap: 30px; 
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
 
 .campo-form input,
 .campo-form select,
@@ -272,6 +341,17 @@ body {
     transition: border-color 0.3s;
 }
 
+.campo-form input:focus,
+.campo-form select:focus,
+.campo-form textarea:focus {
+    border-color: #3B82F6;
+    outline: none;
+}
+
+.campo-form textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 100px; /* Altura mínima */
+}
 
 .botoes-form {
     display: flex;
@@ -296,12 +376,12 @@ body {
     border: 1px solid #ddd;
     border-radius: 10px;
     margin-bottom: 6px;
-    font-size: 10px;
+    font-size: 15px;
     color: #333;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
     flex: 1 1 calc(33.33% - 30px);
     max-width: 500px;
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 .tarefa-item h4 {
@@ -334,9 +414,9 @@ body {
     background-color: #eaeaea;
     padding: 5px 9px;
     border-radius: 5px;
-    white-space: nowrap; 
+    white-space: nowrap; /* Impede quebra de linha */
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; /* Adiciona "..." se o texto for muito longo */
 }
 
 .tempo-restante {
@@ -348,11 +428,40 @@ body {
     border-radius: 5px;
     display: flex;
     align-items: center;
-    gap: 5px;
-    white-space: nowrap; 
+    gap: 20px;
+    white-space: nowrap; /* Evita quebra de linha */
+}
+
+#modal-tarefa-detalhes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal de detalhes da tarefa */
+#modal-tarefa-detalhes {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
 }
 
 
+#modal-tarefa-detalhes .close-modal {
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#modal-tarefa-detalhes h3 {
+    margin-top: 0;
+    color: #333;
+}
 
 #modal-tarefa-detalhes .campo-form {
     margin-bottom: 15px;
@@ -368,6 +477,10 @@ body {
     color: #333;
 }
 
+#modal-tarefa-detalhes .botoes-form {
+    display: flex;
+    margin-top: 20px;
+}
 
 #modal-tarefa-detalhes .btn {
     padding: 10px 20px;
@@ -378,21 +491,21 @@ body {
 }
 
 #modal-tarefa-detalhes .btn-editar {
-    background-color: #3B82F6; 
+    background-color: #3B82F6; /* Cor azul */
     color: white;
 }
 
 #modal-tarefa-detalhes .btn-concluir {
-    background-color: #3B82F6; 
+    background-color: #3B82F6; /* Cor azul */
     color: white;
 }
 
 #modal-tarefa-detalhes .btn-editar:hover {
-    background-color: #ffffff;
+    background-color: #ffffff; /* Cor azul mais escura ao passar o mouse */
     color: #3B82F6;
 }
 
 #modal-tarefa-detalhes .btn-concluir:hover {
-    background-color: #ffffff; 
-    color: #3B82F6;
+    background-color: #ffffff; /* Cor azul mais escura ao passar o mouse */
+    color: #3B82F6;
 }
