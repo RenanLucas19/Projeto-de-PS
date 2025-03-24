@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #d7cece;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 800px; /* Largura reduzida para uma tela menor */
+    height: 500px; /* Altura reduzida */
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.first-column {
+    width: 50%;
+    background-color: #3B82F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.first-column .logo {
+    width: 100px; /* Logo menor */
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.first-column .title-primary {
+    font-size: 24px; /* Título menor */
+    margin-bottom: 10px;
+}
+
+.first-column .description {
+    font-size: 14px; /* Descrição menor */
+    color: #e0e0e0;
+}
+
+.second-column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.second-column h2 {
+    font-size: 13px; /* Título menor */
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.form {
+    width: 100%;
+    max-width: 250px; /* Formulário mais compacto */
+}
+
+.form .description {
+    font-size: 12px; /* Texto menor */
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.input-container .icon {
+    position: absolute;
+    left: 10px;
+    top: 70%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 14px;
+}
+
+.form input {
+    width: 100%;
+    padding: 8px 8px 8px 30px; /* Padding para acomodar o ícone */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px; /* Texto menor */
+}
+
+.btn {
+    width: 100%;
+    padding: 8px; /* Botão menor */
+    border-radius: 5px;
+    font-size: 12px; /* Texto menor */
+    cursor: pointer;
+    margin-top: 10px;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #3B82F6;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #1e66d8;
+}
+
+.btn-black {
+    background-color: black;
+    color: white;
+}
+
+.btn-black:hover {
+    background-color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+    }
+
+    .first-column, .second-column {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .first-column {
+        height: 150px; /* Altura menor para a coluna da logo */
+    }
+
+    .second-column {
+        height: auto;
+    }
+
+    .first-column .logo {
+        width: 80px; /* Logo ainda menor em telas pequenas */
+        height: 80px;
+    }
+
+    .first-column .title-primary {
+        font-size: 20px; /* Título menor em telas pequenas */
+    }
+
+    .first-column .description {
+        font-size: 12px; /* Descrição menor em telas pequenas */
+    }
+
+    .second-column h2 {
+        font-size: 16px; /* Título menor em telas pequenas */
+    }
+
+    .form input {
+        padding: 8px 8px 8px 30px; /* Padding ajustado para telas pequenas */
+    }
+}

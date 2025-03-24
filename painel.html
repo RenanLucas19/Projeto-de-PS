@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Atividades - SIGAE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/painel.css">
+</head>
+<body>
+
+<!-- Cabeçalho Fixo no Topo -->
+<header class="cabecalho">
+    <div class="logo-container">
+        <img src="img/SIGAE.png" alt="Logo SIGAE" class="logo">
+        <p class="frase">Bem-vindo ao SIGAE, seu sistema de gerenciamento de atividades acadêmicas!</p>
+    </div>
+</header>
+
+<!-- Imagem Grande Abaixo da Faixa Azul -->
+<div class="imagem-container">
+    <img src="img/livro.jpg" alt="Livro" class="caneta">
+    <div class="texto-sobre-imagem">Painel de Atividades</div>
+</div>
+
+<!-- Container para Disciplinas Matriculadas -->
+<div class="disciplinas-container">
+    <div class="cabecalho-disciplinas">
+        <h2>Disciplinas Matriculadas</h2>
+        <div class="botoes-direita">
+            <button class="btn btn-cadastrar" id="btn-cadastrar-disciplina">
+                <i class="fas fa-book"></i> Cadastrar Disciplina
+            </button>
+            <button class="btn btn-cadastrar" id="btn-cadastrar-tarefa">
+                <i class="fas fa-tasks"></i> Cadastrar Tarefa
+            </button>
+        </div>
+    </div>
+
+    <!-- Lista de Disciplinas Cadastradas -->
+    <div id="lista-disciplinas" class="lista-disciplinas">
+        <!-- As disciplinas cadastradas serão adicionadas aqui como botões -->
+    </div>
+
+    <!-- Área para Tarefas Cadastradas -->
+    <div id="lista-tarefas" class="lista-tarefas">
+        <!-- As tarefas cadastradas serão adicionadas aqui -->
+    </div>
+
+</div>
+
+<!-- Modal de Cadastro de Disciplina -->
+<div id="modal-cadastro-disciplina" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3>Cadastrar Disciplina</h3>
+        <div class="campo-form">
+            <label for="nome-disciplina">Disciplina</label>
+            <input type="text" id="nome-disciplina" placeholder="Informe a disciplina">
+        </div>
+
+        <!-- Área para exibir as disciplinas cadastradas como botões -->
+        <div id="disciplinas-cadastradas-modal" class="disciplinas-cadastradas-modal">
+            <!-- As disciplinas cadastradas serão exibidas aqui como botões -->
+        </div>
+
+        <div class="botoes-form">
+            <button class="btn btn-salvar" id="btn-salvar">
+                <i class="fa-solid fa-check"></i> Salvar
+            </button>
+            <button class="btn btn-cancelar" id="btn-cancelar">
+                <i class="fas fa-times"></i> Cancelar
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Cadastro de Tarefa -->
+<div id="modal-cadastro-tarefa" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3>Cadastrar Tarefa</h3>
+        <div class="campo-form">
+            <label for="titulo-tarefa"> Título</label>
+            <input type="text" id="titulo-tarefa" placeholder="Informe o titulo">
+        </div>
+        <div class="campo-form">
+            <label for="disciplina-tarefa"> Disciplina</label>
+            <select id="disciplina-tarefa">
+                <option value="">Selecione a disciplina</option>
+                <!-- As disciplinas cadastradas serão adicionadas aqui dinamicamente -->
+            </select>
+        </div>
+        <div class="campo-form">
+            <label for="descricao-tarefa">Descrição</label>
+            <textarea id="descricao-tarefa" placeholder="Criar um diagrama de atividades para representar o fluxo de desenvolvimento de um software, considerando um modelo incremental."></textarea>
+        </div>
+        <div class="campo-form">
+            <label for="data-inicio"><i class="fas fa-calendar-alt"></i> Data de Início</label>
+            <input type="date" id="data-inicio">
+        </div>
+        <div class="campo-form">
+            <label for="data-entrega"><i class="fas fa-calendar-check"></i> Data de Entrega</label>
+            <input type="date" id="data-entrega">
+        </div>
+        <div class="botoes-form">
+            <button class="btn btn-salvar" id="btn-salvar-tarefa">
+                <i class="fas fa-check"></i> Cadastrar Tarefa
+            </button>
+            <button class="btn btn-cancelar" id="btn-cancelar-tarefa">
+                <i class="fas fa-times"></i> Cancelar
+            </button>
+        </div>
+    </div>
+</div>
+
+<div id="modal-tarefa-detalhes" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3>Detalhes da Tarefa</h3>
+        <div class="campo-form">
+            <label>Título</label>
+            <p id="titulo-tarefa-modal"></p>
+        </div>
+        <div class="campo-form">
+            <label>Disciplina</label>
+            <p id="disciplina-tarefa-modal"></p>
+        </div>
+        <div class="campo-form">
+            <label>Descrição</label>
+            <p id="descricao-tarefa-modal"></p>
+        </div>
+        <!-- Contêiner para as datas lado a lado -->
+        <div class="data-container">
+            <div class="campo-form">
+                <label>Data de Início</label>
+                <p id="data-inicio-modal"></p>
+            </div>
+            <div class="campo-form">
+                <label>Data de Entrega</label>
+                <p id="data-entrega-modal"></p>
+            </div>
+        </div>
+        <div class="botoes-form">
+            <button class="btn btn-editar" id="btn-editar-tarefa">
+                <i class="fas fa-edit"></i> Editar Tarefa
+            </button>
+            <button class="btn btn-concluir" id="btn-concluir-tarefa">
+                <i class="fas fa-check"></i> Concluir Tarefa
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Edição de Tarefa -->
+<div id="modal-editar-tarefa" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3>Editar Tarefa</h3>
+        <div class="campo-form">
+            <label for="titulo-editar">Título</label>
+            <input type="text" id="titulo-editar">
+        </div>
+        <div class="campo-form">
+            <label for="disciplina-editar">Disciplina</label>
+            <select id="disciplina-editar">
+                <option value="">Selecione a disciplina</option>
+                <!-- As disciplinas cadastradas serão adicionadas aqui dinamicamente -->
+            </select>
+        </div>
+        <div class="campo-form">
+            <label for="descricao-editar">Descrição</label>
+            <textarea id="descricao-editar"></textarea>
+        </div>
+        <div class="campo-form">
+            <label for="data-inicio-editar">Data de Início</label>
+            <input type="date" id="data-inicio-editar">
+        </div>
+        <div class="campo-form">
+            <label for="data-entrega-editar">Data de Entrega</label>
+            <input type="date" id="data-entrega-editar">
+        </div>
+        <div class="botoes-form">
+            <button class="btn btn-salvar" id="btn-salvar-editar">
+                <i class="fas fa-check"></i> Salvar alterações
+            </button>
+            <button class="btn btn-cancelar" id="btn-cancelar-editar">
+                <i class="fas fa-times"></i> Cancelar alterações
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>

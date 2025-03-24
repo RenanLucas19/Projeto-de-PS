@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGAE - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Coluna da Esquerda: Logo e Título -->
+    <div class="first-column">
+        <img src="img/SIGAE.png" alt="Logo SIGAE" class="logo">
+        <h1 class="title-primary">SIGAE</h1>
+        <p class="description">Sistema de Gerenciamento de Atividades Escolares</p>
+    </div>
+
+    <!-- Coluna da Direita: Tela de Login -->
+    <div id="login-box" class="second-column">
+        <nav id="navbar">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </nav><br>
+        <h2>Continue fazendo o login</h2>
+        <form class="form">
+            <div class="input-container">
+                <p class="description">E-mail</p>
+                <i class="fa-regular fa-envelope icon"></i>
+                <input type="email" placeholder="Digite seu e-mail">
+            </div>
+
+            <div class="input-container">
+                <p class="description">Senha</p>
+                <i class="fa-solid fa-lock icon"></i>
+                <input type="password" placeholder="Informe a senha">
+            </div>
+
+            <button class="btn btn-secondary" type="button" onclick="window.location.href='painel.html'">Entrar</button>
+            <button type="button" class="btn btn-black" onclick="mostrarCadastro()">Cadastre-se</button>
+        </form>
+    </div>
+
+    <!-- Coluna da Direita: Tela de Cadastro -->
+    <div id="cadastro-box" class="second-column hidden">
+        <nav id="navbar">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </nav><br>
+        <h2>Faça seu cadastro e veja suas atividades</h2>
+        <form class="form">
+            <div class="input-container">
+                <p class="description">Nome</p>
+                <i class="fa-solid fa-user icon"></i>
+                <input type="text" placeholder="Digite seu nome">
+            </div>
+
+            <div class="input-container">
+                <p class="description">E-mail</p>
+                <i class="fa-regular fa-envelope icon"></i>
+                <input type="email" placeholder="Informe seu e-mail">
+            </div>
+
+            <div class="input-container">
+                <p class="description">Senha</p>
+                <i class="fa-solid fa-lock icon"></i>
+                <input type="password" placeholder="Informe a senha">
+            </div>
+
+            <button class="btn btn-secondary">Cadastre-se</button>
+            <button type="button" class="btn btn-black" onclick="mostrarLogin()">Já tenho uma conta</button>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
