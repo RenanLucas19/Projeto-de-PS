@@ -41,7 +41,21 @@ body {
     font-weight: bold; /* Deixa a frase em negrito */
 }
 
-
+.usuario-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .usuario-info i {
+    font-size: 18px;
+  }
+  
+  .usuario-info span {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
 .imagem-container {
     width: 103%;
     margin-top: 80px; /* Ajusta o espaço para o cabeçalho */
