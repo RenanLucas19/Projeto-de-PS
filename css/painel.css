@@ -1,3 +1,4 @@
+/* Reset de estilos para remover margens e preenchimentos padrão dos elementos */
 * {
     margin: 0;
     padding: 0;
@@ -5,243 +6,267 @@
     font-family: Arial, sans-serif;
 }
 
+/* Estilização geral do corpo da página */
 body {
     background-color: #ffffff;
     display: flex;
-    flex-direction: column;
-    /* Remova height: 100vh; para permitir que o body cresça conforme o conteúdo */
+    flex-direction: column; 
 }
 
-/* Cabeçalho Fixo no Topo */
+/* Cabeçalho fixo no topo da página */
 .cabecalho {
     width: 100%;
-    background-color: #3B82F6; /* Fundo azul */
+    background-color: #3B82F6; 
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Espaço entre elementos do cabeçalho */
     align-items: center;
-    position: fixed; /* Fixa o cabeçalho no topo */
-    z-index: 1000; /* Garante que fique acima do conteúdo */
+    position: fixed; /* Mantém fixo no topo */
+    z-index: 1000; /* Garante que o cabeçalho fique acima do conteúdo */
 }
 
+/* Container da logo e frase */
 .logo-container {
     display: flex;
     align-items: center;
     gap: 10px; /* Espaçamento entre a logo e a frase */
 }
 
+/* Ajuste de tamanho da logo */
 .logo-container .logo {
-    width: 60px; /* Tamanho da logo */
+    width: 60px;
     height: auto;
 }
 
+/* Estilização da frase ao lado da logo */
 .logo-container .frase {
     font-size: 16px;
-    color: #ffffff; /* Texto branco */
-    font-weight: bold; /* Deixa a frase em negrito */
+    color: #ffffff; 
+    font-weight: bold; /* Negrito */
 }
 
+/* Informações do usuário no canto superior direito */
 .usuario-info {
     display: flex;
     align-items: center;
-    gap: 5px;
-  }
-  
-  .usuario-info i {
-    font-size: 18px;
-  }
-  
-  .usuario-info span {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-.imagem-container {
-    width: 103%;
-    margin-top: 80px; /* Ajusta o espaço para o cabeçalho */
-    text-align: center;
-    overflow: hidden; /* Garante que a imagem não ultrapasse o container */
-    position: relative; /* Permite posicionar o texto sobre a imagem */
+    gap: 5px; 
 }
 
+/* Ícone ao lado do nome do usuário */
+.usuario-info i {
+    font-size: 18px;
+}
+
+/* Nome do usuário com destaque */
+.usuario-info span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Container da imagem de fundo */
+.imagem-container {
+    width: 103%; /* Largura maior para cobrir totalmente a tela */
+    margin-top: 80px; /* Ajusta espaço para o cabeçalho fixo */
+    text-align: center;
+    overflow: hidden; /* Evita que a imagem ultrapasse os limites */
+    position: relative; /* Permite posicionar elementos sobre a imagem */
+}
+
+/* Imagem dentro do container */
 .imagem-container .caneta {
-    width: 100%; /* Ocupa a largura total da tela */
-    height: 250px; /* Altura fixa da imagem */
-    object-fit: cover; /* Garante que a imagem cubra o espaço */
+    width: 100%; /* Ocupa toda a largura */
+    height: 250px; /* Define altura fixa */
+    object-fit: cover; /* Garante que a imagem cubra todo o espaço sem distorção */
 }
 
 /* Texto sobre a imagem */
 .texto-sobre-imagem {
     position: absolute;
-    top: 86%; /* Centraliza verticalmente */
-    left: 30%; /* Centraliza horizontalmente */
-    transform: translate(-50%, -50%); /* Ajusta o centro exato */
-    color: white; /* Cor do texto */
-    font-size: 100px; /* Tamanho do texto */
-    font-weight: bold; /* Texto em negrito */
+    top: 86%; 
+    left: 30%; 
+    transform: translate(-50%, -50%); /* Centraliza o texto */
+    color: white; 
+    font-size: 100px; /* Tamanho grande */
+    font-weight: bold; /* Negrito */
 }
 
-/* Container para Disciplinas Matriculadas */
+/* Container para a seção de disciplinas */
 .disciplinas-container {
-    width: 1800px; /* Largura do container */
+    width: 1800px; /* Define largura do container */
     margin: 50px; /* Espaçamento externo */
     padding: 15px; /* Espaçamento interno */
-    background-color: #f9f9f9; /* Fundo claro */
-    border: 1px solid #ddd; /* Borda sutil */
-    border-radius: 8px; /* Cantos arredondados */
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd;
+    border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
+/* Cabeçalho da seção de disciplinas */
 .cabecalho-disciplinas {
     display: flex;
-    justify-content: space-between; /* Alinha o título à esquerda e os botões à direita */
-    align-items: center; /* Centraliza verticalmente */
-    margin-bottom: 25px; /* Espaçamento abaixo do cabeçalho */
+    justify-content: space-between; /* Título à esquerda e botões à direita */
+    align-items: center;
+    margin-bottom: 25px; /* Espaçamento inferior */
 }
 
+/* Estilização do título dentro do cabeçalho de disciplinas */
 .cabecalho-disciplinas h2 {
     font-size: 25px;
-    color: #333; /* Cor do texto */
-    font-weight: bold; /* Título em negrito */
+    color: #333; 
+    font-weight: bold; 
 }
 
-/* Contêiner para os botões à direita */
+/* Container para os botões no canto direito */
 .botoes-direita {
     display: flex;
     gap: 50px; /* Espaçamento entre os botões */
 }
 
-/* Estilo dos botões de cadastro */
+/* Estilização dos botões de cadastro */
 .btn-cadastrar {
     padding: 10px 20px;
-    background-color: #fff; /* Fundo azul */
-    color: #3B82F6; /* Texto branco */
+    background-color: #fff; 
+    color: #3B82F6; 
     border: none;
-    border-radius: 5px;
+    border-radius: 5px; 
     font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Efeito de transição suave */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s; /* Efeito suave ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
+/* Efeito de hover nos botões */
 .btn-cadastrar:hover {
-    background-color: #3B82F6;
-    color: #fff;
+    background-color: #3B82F6; 
+    color: #fff; 
 }
 
+/* Ícone dentro do botão */
 .btn-cadastrar i {
-    margin-right: 8px; /* Espaçamento entre o ícone e o texto */
+    margin-right: 8px; /* Espaçamento entre ícone e texto */
 }
 
 /* Estilo do modal */
 .modal {
     display: none; /* Oculta o modal inicialmente */
-    position: fixed;
+    position: fixed; /* Fixa o modal na tela */
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* Garante que o modal fique acima de tudo */
+    background-color: rgba(0, 0, 0, 0.5); 
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    z-index: 1000; /* Garante que o modal fique acima de todos os outros elementos */
 }
 
+/* Conteúdo do modal */
 .modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 500px; /* Largura do modal */
-    position: relative;
+    background-color: #fff; 
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    width: 500px; /* Define a largura do modal */
+    position: relative; /* Permite posicionamento absoluto de elementos internos */
 }
 
+/* Botão de fechar o modal */
 .close-modal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    color: #000000;
+    position: absolute; /* Posicionamento absoluto dentro do modal */
+    top: 10px; /* Distância do topo */
+    right: 10px; /* Distância da direita */
+    font-size: 20px; /* Tamanho do ícone */
+    cursor: pointer; /* Altera o cursor ao passar o mouse */
+    color: #000000; 
 }
 
+/* Mudança de cor ao passar o mouse no botão de fechar */
 .close-modal:hover {
     color: #000;
 }
 
-/* Estilo dos campos e botões dentro do modal */
+/* Estilo do título dentro do modal */
 .modal-content h3 {
-    font-size: 20px;
-    color: #3b3737;
-    margin-bottom: 20px;
-    font-weight: bold;
-    border-bottom: 2px solid #d8dce2;
-    padding-bottom: 10px;
+    font-size: 20px; /* Tamanho do texto */
+    color: #3b3737; /* Cor escura */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    font-weight: bold; /* Negrito */
+    border-bottom: 2px solid #d8dce2; 
+    padding-bottom: 10px; /* Espaçamento entre o texto e a borda */
 }
 
+/* Container para os campos do formulário */
 .campo-form {
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* Espaçamento inferior */
 }
 
+/* Estilo dos rótulos dos campos */
 .campo-form label {
-    display: block;
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 5px;
-    font-weight: bold;
+    display: block; /* Faz o rótulo ocupar toda a linha */
+    font-size: 14px; /* Tamanho do texto */
+    color: #555; /* Cor cinza escuro */
+    margin-bottom: 5px; /* Espaçamento inferior */
+    font-weight: bold; /* Negrito */
 }
 
+/* Estilização dos campos de entrada */
 .campo-form input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-bottom: 10px;
-    transition: border-color 0.3s;
+    width: 100%; /* Largura total do container */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ddd; 
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    margin-bottom: 10px; /* Espaçamento inferior */
+    transition: border-color 0.3s; /* Animação ao focar no campo */
 }
 
+/* Mudança na borda do campo ao ser focado */
 .campo-form input:focus {
-    border-color: #3B82F6;
-    outline: none;
+    border-color: #3B82F6; 
+    outline: none; /* Remove a borda de foco padrão */
 }
 
+/* Container dos botões dentro do modal */
 .botoes-form {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
+    display: flex; /* Organiza os botões lado a lado */
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-top: 20px; /* Espaçamento superior */
 }
 
+/* Estilo do botão salvar */
 .btn-salvar {
-    background-color: #fff;
-    color: #3B82F6;
+    background-color: #fff; 
+    color: #3B82F6; 
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    transition: background-color 0.3s;
-}
-
-.btn-salvar:hover {
-    background-color:#3B82F6;
-    color: #fff;
-}
-
-.btn-cancelar {
-    background-color: #fff;
-    color: #3B82F6;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor do mouse */
+    font-size: 14px; /* Tamanho da fonte */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
-    transition: background-color 0.3s;
+    transition: background-color 0.3s; /* Efeito suave ao passar o mouse */
 }
 
+/* Mudança de cor do botão salvar ao passar o mouse */
+.btn-salvar:hover {
+    background-color: #3B82F6;
+    color: #fff; 
+}
+
+/* Estilo do botão cancelar */
+.btn-cancelar {
+    background-color: #fff; 
+    color: #3B82F6; 
+    border: none;
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor do mouse */
+    font-size: 14px; /* Tamanho da fonte */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    transition: background-color 0.3s; 
+}
+
+/* Mudança de cor do botão cancelar ao passar o mouse */
 .btn-cancelar:hover {
-    background-color:#3B82F6;
-    color: #fff;
+    background-color: #3B82F6; 
+    color: #fff; 
 }
 
 /* Estilo da área de disciplinas cadastradas no modal */
@@ -254,279 +279,297 @@ body {
 }
 
 /* Estilo dos botões de disciplinas cadastradas */
-/* Estilo dos botões de disciplinas cadastradas */
 .disciplina-botao {
-    display: flex;
-    align-items: center;
+    display: flex; /* Organiza o conteúdo do botão em linha */
+    align-items: center; /* Centraliza os itens verticalmente */
     gap: 8px; /* Espaçamento entre o texto e o ícone de "X" */
-    padding: 8px 12px;
-    background-color: #3B82F6; /* Cor azul */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 8px 12px; /* Espaçamento interno */
+    background-color: #3B82F6; 
+    color: white; 
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 14px; /* Tamanho do texto */
+    cursor: pointer; /* Altera o cursor ao passar o mouse */
+    transition: background-color 0.3s; /* Animação ao passar o mouse */
 }
 
+/* Mudança de cor do botão ao passar o mouse */
 .disciplina-botao:hover {
-    background-color: #1e66d8; /* Cor azul mais escura ao passar o mouse */
+    background-color: #1e66d8; 
 }
 
 /* Estilo do ícone de "X" para remover a disciplina */
 .remover-disciplina {
-    cursor: pointer;
-    font-size:50px;
-    color: white;
+    cursor: pointer; /* Indica que é clicável */
+    font-size: 50px; /* Tamanho do ícone */
+    color: white; 
     margin-left: 8px; /* Espaçamento entre o texto e o ícone */
 }
 
 /* Estilo da lista de disciplinas cadastradas */
 .lista-disciplinas {
-    margin-top: 20px;
+    margin-top: 20px; /* Espaçamento superior */
     display: flex;
-    flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha */
-    gap: 10px;
-    padding-left: 80px; 
-    margin-bottom: 20px; 
-    
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    gap: 10px; /* Espaçamento entre os itens */
+    padding-left: 80px; /* Ajusta o alinhamento para a direita */
+    margin-bottom: 20px; /* Espaçamento inferior */
 }
 
-/* Estilo dos botões de disciplinas cadastradas */
+/* Estilo dos botões dentro da lista de disciplinas */
 .disciplina-item {
-    padding: 8px 12px;
+    padding: 8px 12px; /* Espaçamento interno */
     background-color: #3B82F6; 
-    color: white;
-    border: none;
-    border-radius: 50px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    color: white; 
+    border: none; /* Remove borda */
+    border-radius: 50px; /* Bordas totalmente arredondadas */
+    font-size: 16px; /* Tamanho do texto */
+    cursor: pointer; /* Altera o cursor ao passar o mouse */
+    transition: background-color 0.3s; /* Animação ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
+/* Mudança de cor do botão de disciplina ao passar o mouse */
 .disciplina-item:hover {
     background-color: #ffffff; 
-    color: #3B82F6;
+    color: #3B82F6; 
 }
 
+/* Estilo do conteúdo do modal */
 .modal-content {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(120, 51, 51, 0.2);
-    width: 400px;
-    position: relative;
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(120, 51, 51, 0.2); /* Sombra vermelha suave */
+    width: 400px; /* Largura do modal */
+    position: relative; /* Permite posicionamento absoluto de elementos internos */
 }
 
+/* Estilo do título do modal */
 .modal-content h3 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 20px;
-    font-weight: bold;
+    font-size: 20px; /* Tamanho do texto */
+    color: #333; /* Cor escura */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    font-weight: bold; /* Negrito */
     border-bottom: 2px solid #a79f9f;
-    padding-bottom: 10px;
+    padding-bottom: 10px; /* Espaçamento inferior */
 }
 
+/* Container dos campos do formulário */
 .campo-form {
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Espaçamento inferior */
 }
 
+/* Estilo dos rótulos dos campos */
 .campo-form label {
-    display: flex;
-    align-items: center;
-    gap: 30px; 
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 5px;
-    font-weight: bold;
+    display: flex; /* Organiza o conteúdo do label em linha */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 30px; /* Espaçamento entre os elementos dentro do label */
+    font-size: 14px; /* Tamanho do texto */
+    color: #555; /* Cor cinza escuro */
+    margin-bottom: 5px; /* Espaçamento inferior */
+    font-weight: bold; /* Negrito */
 }
 
+/* Estilização dos campos de entrada, seletores e áreas de texto */
 .campo-form input,
 .campo-form select,
 .campo-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-bottom: 10px;
-    transition: border-color 0.3s;
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ddd; 
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    margin-bottom: 10px; /* Espaçamento inferior */
+    transition: border-color 0.3s; /* Efeito de transição ao focar */
 }
 
+/* Mudança na borda dos campos ao serem focados */
 .campo-form input:focus,
 .campo-form select:focus,
 .campo-form textarea:focus {
-    border-color: #3B82F6;
-    outline: none;
+    border-color: #3B82F6; 
+    outline: none; /* Remove a borda de foco padrão */
 }
 
+/* Configuração da área de texto */
 .campo-form textarea {
-    resize: vertical; /* Permite redimensionar verticalmente */
-    min-height: 100px; /* Altura mínima */
+    resize: vertical; /* Permite redimensionamento apenas na vertical */
+    min-height: 100px; /* Define uma altura mínima */
 }
 
+/* Container dos botões dentro do modal */
 .botoes-form {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
+    display: flex; /* Organiza os botões lado a lado */
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-top: 20px; /* Espaçamento superior */
 }
 
+/* Estiliza a lista de tarefas */
 .lista-tarefas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    max-width: 100%;
-    width: 100%;
-    padding-left: 0;
+    display: flex; /* Exibe os itens em um layout flexível */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    gap: 30px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    max-width: 100%; /* Garante que a largura máxima seja 100% */
+    width: 100%; /* Define a largura total */
+    padding-left: 0; /* Remove o recuo padrão da lista */
 }
 
+/* Estiliza cada item de tarefa */
 .tarefa-item {
-    position: relative;
-    padding: 14px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    margin-bottom: 6px;
-    font-size: 15px;
-    color: #333;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(33.33% - 30px);
-    max-width: 500px;
-    overflow: hidden; 
+    position: relative; /* Define uma posição relativa para posicionar elementos internos */
+    padding: 14px; /* Espaçamento interno */
+    background-color: #fff; 
+    border: 1px solid #ddd; 
+    border-radius: 10px; /* Bordas arredondadas */
+    margin-bottom: 6px; /* Espaçamento inferior */
+    font-size: 15px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
+    flex: 1 1 calc(33.33% - 30px); /* Define a largura flexível para ocupar 1/3 da tela */
+    max-width: 500px; /* Define um limite máximo de largura */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa o limite */
 }
 
+/* Estiliza o título da tarefa */
 .tarefa-item h4 {
-    font-size: 20px;
-    color: #000000;
-    margin-bottom: 15px;
-    white-space: nowrap; 
-    overflow: hidden; 
-    text-overflow: ellipsis; 
+    font-size: 20px; /* Tamanho do título */
+    color: #000000; 
+    margin-bottom: 15px; /* Espaçamento inferior */
+    white-space: nowrap; /* Impede que o texto quebre */
+    overflow: hidden; /* Esconde o conteúdo excedente */
+    text-overflow: ellipsis; /* Adiciona "..." ao final do texto cortado */
 }
 
+/* Estiliza o parágrafo dentro da tarefa */
 .tarefa-item p {
-    margin: 15px 0;
-    font-size: 17px;
-    white-space: normal;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    margin: 15px 0; /* Define espaçamento vertical */
+    font-size: 17px; /* Tamanho da fonte */
+    white-space: normal; /* Permite que o texto quebre linha */
+    overflow: hidden; /* Esconde o conteúdo excedente */
+    text-overflow: ellipsis; /* Adiciona "..." ao final do texto cortado */
 }
 
+/* Estiliza textos em negrito dentro da tarefa */
 .tarefa-item strong {
-    color: #555;
+    color: #555; /* Cor cinza escuro */
 }
 
+/* Estiliza a caixa de tempo restante dentro da tarefa */
 .tarefa-item .tempo-restante {
-    position: absolute;
-    top: 5px;
-    right: 6px;
-    font-size: 12px;
-    color: #666;
+    position: absolute; /* Posição absoluta dentro da tarefa */
+    top: 5px; /* Distância do topo */
+    right: 6px; /* Distância da direita */
+    font-size: 12px; /* Tamanho da fonte */
+    color: #666; 
     background-color: #eaeaea;
-    padding: 5px 9px;
-    border-radius: 5px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    padding: 5px 9px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    white-space: nowrap; /* Impede quebra de linha */
+    overflow: hidden; /* Esconde conteúdo excedente */
+    text-overflow: ellipsis; /* Adiciona "..." ao final do texto cortado */
 }
 
+/* Estiliza o tempo restante de maneira geral */
 .tempo-restante {
-    position: absolute;
-    top: 6px;
-    right: 6px;
-    font-size: 12px;
-    padding: 5px 9px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    white-space: nowrap;
+    position: absolute; /* Define posição absoluta */
+    top: 6px; /* Distância do topo */
+    right: 6px; /* Distância da direita */
+    font-size: 12px; /* Tamanho da fonte */
+    padding: 5px 9px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    display: flex; /* Exibe os itens em linha */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 20px; /* Espaçamento entre elementos */
+    white-space: nowrap; /* Impede quebra de linha */
 }
 
+/* Estiliza o modal de detalhes da tarefa */
 #modal-tarefa-detalhes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Exibe os itens em um layout flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
-
+/* Oculta o modal de detalhes da tarefa por padrão */
 #modal-tarefa-detalhes {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
+    display: none; /* Inicialmente escondido */
+    position: fixed; /* Fixa na tela inteira */
+    top: 0; /* Posiciona no topo */
+    left: 0; /* Posiciona na esquerda */
+    width: 100%; /* Ocupa a largura total */
+    height: 100%; /* Ocupa a altura total */
+    background-color: rgba(0, 0, 0, 0.5); 
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
 }
 
-
+/* Estiliza o botão de fechar do modal */
 #modal-tarefa-detalhes .close-modal {
-    float: right;
-    font-size: 30px;
-    cursor: pointer;
+    float: right; /* Posiciona o botão à direita */
+    font-size: 30px; /* Define o tamanho da fonte */
+    cursor: pointer; /* Indica que é clicável */
 }
 
+/* Estiliza o título dentro do modal */
 #modal-tarefa-detalhes h3 {
-    margin-top: 0;
-    color: #333;
+    margin-top: 0; /* Remove margem superior */
+    color: #333; /* Define a cor do texto */
 }
 
+/* Estiliza os campos do formulário no modal */
 #modal-tarefa-detalhes .campo-form {
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Define o espaçamento inferior */
 }
 
-
+/* Estiliza os parágrafos dentro do modal */
 #modal-tarefa-detalhes p {
-    margin: 0;
-    padding: 8px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    color: #333;
+    margin: 0; /* Remove margens */
+    padding: 8px; /* Define espaçamento interno */
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; /* Bordas arredondadas */
+    color: #333; 
 }
 
+/* Estiliza a área de botões dentro do modal */
 #modal-tarefa-detalhes .botoes-form {
-    display: flex;
-    margin-top: 20px;
+    display: flex; /* Organiza os botões lado a lado */
+    margin-top: 20px; /* Adiciona espaçamento superior */
 }
 
+/* Estiliza os botões do modal */
 #modal-tarefa-detalhes .btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 15px;
+    padding: 10px 20px; /* Define espaçamento interno */
+    border: none; /* Remove bordas */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Indica que é clicável */
+    font-size: 15px; /* Define o tamanho do texto */
 }
 
-/* === ESTILO PADRÃO PARA TODOS OS BOTÕES === */
 button {
-    font-size: 14px;
-    font-weight: bold;
-    padding: 12px 20px;
-    border: #000000; /* Azul */
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-    display: inline-block;
-    text-align: center;
-    background-color: #007bff; /* Azul */
-    color: white;
-    box-shadow: 3px 3px 6px rgba(61, 29, 29, 0.1);
+    font-size: 14px; /* Define o tamanho da fonte do botão */
+    font-weight: bold; /* Deixa o texto do botão em negrito */
+    padding: 12px 20px; /* Define o espaçamento interno do botão */
+    border: #000000; 
+    border-radius: 14px; /* Arredonda as bordas do botão */
+    cursor: pointer; /* Define o cursor como ponteiro ao passar sobre o botão */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; 
+    /* Adiciona uma transição suave para mudanças de cor e efeito de transformação */
+    display: inline-block; /* Garante que o botão se comporte como um bloco inline */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    background-color: #007bff; 
+    color: white; 
+    box-shadow: 3px 3px 6px rgba(61, 29, 29, 0.1); /* Adiciona uma leve sombra ao botão */
 }
 
-/* === EFEITO HOVER: BOTÃO FICA BRANCO E TEXTO FICA AZUL === */
 button:hover {
-    background-color: white;
-    color: #007bff; /* Azul */
-    transform: scale(1.05);
+    background-color: white; /* Altera o fundo do botão para branco ao passar o mouse */
+    color: #007bff; /* Altera a cor do texto para azul */
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho do botão para dar um efeito de destaque */
 }
 
-/* === EFEITO AO CLICAR (ACTIVE): LEVE ESCALA PARA DAR SENSAÇÃO DE CLIQUE === */
 button:active {
-    transform: scale(0.98);
+    transform: scale(0.98); /* Diminui ligeiramente o tamanho do botão ao ser pressionado, simulando um efeito de clique */
 }
