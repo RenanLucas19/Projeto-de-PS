@@ -92,7 +92,7 @@ body {
 
 /* Container para a seção de disciplinas */
 .disciplinas-container {
-    width: 1800px; /* Define largura do container */
+    width: 1500px; /* Define largura do container */
     margin: 50px; /* Espaçamento externo */
     padding: 15px; /* Espaçamento interno */
     background-color: #f9f9f9; 
