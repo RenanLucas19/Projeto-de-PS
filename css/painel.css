@@ -69,7 +69,7 @@ body {
 
 /* Container para Disciplinas Matriculadas */
 .disciplinas-container {
-    width: 1400px; /* Largura do container */
+    width: 1800px; /* Largura do container */
     margin: 50px; /* Espaçamento externo */
     padding: 15px; /* Espaçamento interno */
     background-color: #f9f9f9; /* Fundo claro */
@@ -494,7 +494,7 @@ button {
     font-size: 14px;
     font-weight: bold;
     padding: 12px 20px;
-    border: 2px solid #007bff; /* Azul */
+    border: #000000; /* Azul */
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
@@ -502,6 +502,7 @@ button {
     text-align: center;
     background-color: #007bff; /* Azul */
     color: white;
+    box-shadow: 3px 3px 6px rgba(61, 29, 29, 0.1);
 }
 
 /* === EFEITO HOVER: BOTÃO FICA BRANCO E TEXTO FICA AZUL === */
