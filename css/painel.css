@@ -94,7 +94,7 @@ body {
 /* Contêiner para os botões à direita */
 .botoes-direita {
     display: flex;
-    gap: 15px; /* Espaçamento entre os botões */
+    gap: 50px; /* Espaçamento entre os botões */
 }
 
 /* Estilo dos botões de cadastro */
@@ -204,7 +204,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     transition: background-color 0.3s;
 }
 
@@ -262,7 +262,7 @@ body {
 /* Estilo do ícone de "X" para remover a disciplina */
 .remover-disciplina {
     cursor: pointer;
-    font-size:15px;
+    font-size:50px;
     color: white;
     margin-left: 8px; /* Espaçamento entre o texto e o ícone */
 }
@@ -273,30 +273,29 @@ body {
     display: flex;
     flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha */
     gap: 10px;
-    padding-left: 80px; /* Desloca o conteúdo para a direita */
-    margin-bottom: 20px; /* Adiciona um leve espaçamento na parte de baixo */
-    /* Ou use padding-bottom: 20px; se preferir */
+    padding-left: 80px; 
+    margin-bottom: 20px; 
+    
 }
 
 /* Estilo dos botões de disciplinas cadastradas */
 .disciplina-item {
     padding: 8px 12px;
-    background-color: #3B82F6; /* Cor azul */
+    background-color: #3B82F6; 
     color: white;
     border: none;
     border-radius: 50px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .disciplina-item:hover {
-    background-color: #ffffff; /* Cor azul mais escura ao passar o mouse */
+    background-color: #ffffff; 
     color: #3B82F6;
 }
 
-/* Estilo do modal de cadastro de tarefas */
 .modal-content {
     background-color: #fff;
     padding: 20px;
@@ -414,9 +413,9 @@ body {
     background-color: #eaeaea;
     padding: 5px 9px;
     border-radius: 5px;
-    white-space: nowrap; /* Impede quebra de linha */
+    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; /* Adiciona "..." se o texto for muito longo */
+    text-overflow: ellipsis;
 }
 
 .tempo-restante {
@@ -429,7 +428,7 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
-    white-space: nowrap; /* Evita quebra de linha */
+    white-space: nowrap;
 }
 
 #modal-tarefa-detalhes {
@@ -438,7 +437,7 @@ body {
     align-items: center;
 }
 
-/* Modal de detalhes da tarefa */
+
 #modal-tarefa-detalhes {
     display: none;
     position: fixed;
@@ -490,22 +489,29 @@ body {
     font-size: 15px;
 }
 
-#modal-tarefa-detalhes .btn-editar {
-    background-color: #3B82F6; /* Cor azul */
+/* === ESTILO PADRÃO PARA TODOS OS BOTÕES === */
+button {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: 2px solid #007bff; /* Azul */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    text-align: center;
+    background-color: #007bff; /* Azul */
     color: white;
 }
 
-#modal-tarefa-detalhes .btn-concluir {
-    background-color: #3B82F6; /* Cor azul */
-    color: white;
+/* === EFEITO HOVER: BOTÃO FICA BRANCO E TEXTO FICA AZUL === */
+button:hover {
+    background-color: white;
+    color: #007bff; /* Azul */
+    transform: scale(1.05);
 }
 
-#modal-tarefa-detalhes .btn-editar:hover {
-    background-color: #ffffff; /* Cor azul mais escura ao passar o mouse */
-    color: #3B82F6;
-}
-
-#modal-tarefa-detalhes .btn-concluir:hover {
-    background-color: #ffffff; /* Cor azul mais escura ao passar o mouse */
-    color: #3B82F6;
+/* === EFEITO AO CLICAR (ACTIVE): LEVE ESCALA PARA DAR SENSAÇÃO DE CLIQUE === */
+button:active {
+    transform: scale(0.98);
 }
